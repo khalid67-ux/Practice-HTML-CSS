@@ -1,1 +1,362 @@
+* {
+    box-sizing: border-box;
+}
 
+body {
+    margin: 0;
+
+    font-family: Arial, sans-serif;
+
+    background: #f3f5f7;
+
+    color: #222;
+}
+
+
+/* =========================
+   Fixed Sidebar
+========================= */
+
+.sidebar {
+    position: fixed;
+
+    left: 0;
+    top: 0;
+
+    width: 230px;
+    height: 100vh;
+
+    background: #172b4d;
+
+    color: white;
+
+    padding: 25px 20px;
+}
+
+.sidebar h2 {
+    margin-top: 0;
+
+    text-align: center;
+
+    margin-bottom: 30px;
+}
+
+
+/* Sidebar Navigation */
+
+.sidebar-nav {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+.sidebar-nav a {
+    color: white;
+
+    text-decoration: none;
+
+    padding: 14px 12px;
+
+    border-radius: 5px;
+
+    transition: 0.3s;
+}
+
+.sidebar-nav a:hover {
+    background: #284b7a;
+}
+
+
+/* =========================
+   Main Content
+========================= */
+
+.main-content {
+    margin-left: 230px;
+
+    padding: 20px;
+}
+
+
+/* =========================
+   Top Navigation
+========================= */
+
+.top-nav {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    background: white;
+
+    padding: 20px 25px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 8px;
+}
+
+.top-nav h2 {
+    margin: 0;
+
+    color: #172b4d;
+}
+
+.student-area {
+    position: relative;
+
+    padding-right: 20px;
+}
+
+
+/* =========================
+   Notification Badge
+========================= */
+
+.notification {
+    position: absolute;
+
+    top: -12px;
+
+    right: -5px;
+
+    background: red;
+
+    color: white;
+
+    width: 22px;
+    height: 22px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+
+    font-size: 12px;
+
+    font-weight: bold;
+}
+
+
+/* =========================
+   Student Profile
+========================= */
+
+.profile {
+    background: white;
+
+    margin: 20px 0;
+
+    padding: 25px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 8px;
+}
+
+.profile h2 {
+    margin-top: 0;
+
+    color: #172b4d;
+}
+
+.profile-info {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 10px 30px;
+}
+
+
+/* =========================
+   Dashboard Grid
+========================= */
+
+.dashboard-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+
+/* =========================
+   Dashboard Cards
+========================= */
+
+.dashboard-card {
+    background: white;
+
+    padding: 25px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 8px;
+
+    min-height: 180px;
+
+    transition: 0.3s;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 6px 15px #ccc;
+}
+
+.dashboard-card h3 {
+    margin-top: 0;
+
+    color: #172b4d;
+
+    border-bottom: 1px solid #ddd;
+
+    padding-bottom: 10px;
+}
+
+.dashboard-card ul {
+    padding-left: 20px;
+
+    line-height: 1.9;
+}
+
+
+/* =========================
+   GPA & Attendance
+========================= */
+
+.big-number {
+    font-size: 40px;
+
+    font-weight: bold;
+
+    color: #172b4d;
+
+    margin: 25px 0 5px;
+}
+
+
+/* =========================
+   Passed Course
+========================= */
+
+.passed {
+    background: #d8f3dc;
+
+    color: #166534;
+
+    padding: 10px;
+
+    border-radius: 5px;
+}
+
+
+/* =========================
+   Failed Course
+========================= */
+
+.failed {
+    background: #ffd6d6;
+
+    color: #b91c1c;
+
+    padding: 10px;
+
+    border-radius: 5px;
+}
+
+
+/* =========================
+   Notices
+========================= */
+
+.notice-item {
+    padding: 10px;
+
+    margin-bottom: 10px;
+
+    background: #eef4fa;
+
+    border-left: 4px solid #172b4d;
+}
+
+
+/* =========================
+   Footer
+========================= */
+
+footer {
+    margin-top: 30px;
+
+    padding: 20px;
+
+    background: #172b4d;
+
+    color: white;
+
+    text-align: center;
+
+    border-radius: 8px;
+}
+
+
+/* =========================
+   Responsive Design
+========================= */
+
+@media (max-width: 900px) {
+
+    .dashboard-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .sidebar {
+        position: static;
+
+        width: 100%;
+
+        height: auto;
+    }
+
+    .sidebar-nav {
+        flex-direction: row;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    .main-content {
+        margin-left: 0;
+    }
+
+    .top-nav {
+        flex-direction: column;
+
+        gap: 15px;
+
+        text-align: center;
+    }
+
+    .profile-info {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
