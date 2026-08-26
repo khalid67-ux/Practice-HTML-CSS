@@ -1,0 +1,95 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f2f5f9;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 50px;
+    background: #17365d;
+    color: white;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+}
+
+.nav-links a:hover {
+    background: #28598d;
+    border-radius: 5px;
+}
+
+.profile-card {
+    position: relative;
+    width: 700px;
+    margin: 40px auto;
+    padding: 30px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 5px 20px #ccc;
+}
+
+.profile-card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.badge {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    background: green;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 20px;
+}
+
+section {
+    margin-top: 25px;
+    padding: 15px;
+    border-top: 1px solid #ddd;
+    text-align: left;
+}
+
+.academic {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.academic div {
+    padding: 15px;
+    background: #eef4fa;
+    text-align: center;
+    border-radius: 8px;
+}
+
+button {
+    padding: 12px 25px;
+    border: none;
+    background: #17365d;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #28598d;
+}
